@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=fedCourtSys
+comment0.text=\n\ Write\ a\ description\ of\ class\ fedCourtSys\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=damages\ diffStates\ fedLaw\ bankruptcy
+comment1.target=fedCourtSys(int,\ boolean,\ boolean,\ boolean)
+comment2.params=
+comment2.target=boolean\ accepted()
+comment3.params=
+comment3.target=boolean\ getBankruptcy()
+comment4.params=
+comment4.target=boolean\ getFedLaw()
+comment5.params=
+comment5.target=boolean\ getDiffStates()
+comment6.params=
+comment6.target=int\ getDamages()
+numComments=7
