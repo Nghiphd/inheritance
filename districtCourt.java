@@ -1,17 +1,20 @@
 
 /**
- * Write a description of class uSSupremeCourt here.
+ * Write a description of class districtCourt here.
  *
  * @author (your name)
  * @version (a version number or a date)
  */
-public class uSSupremeCourt extends appealsCourt
+public class districtCourt extends fedCourtSys
 {
-     public uSSupremeCourt(int damage, boolean States, boolean fed,
-    boolean bank) {
+    private boolean win;
+    public districtCourt(int damage, boolean States, boolean fed,
+    boolean bank, boolean win2) {
         super(damage,States,fed,bank);
+        this.win = win2;
     }
-    public void proceedings(boolean win) {
+
+    public void district(boolean win) {
         if(accepted()==true && win == true) {
             System.out.println("GET PAID, and go home numbnuts");
         } else if (win == false) {
