@@ -7,22 +7,39 @@
  */
 public class fedCourtSys
 {
-    private boolean bankruptcy;
-    private boolean fedLaw;
-    private int damages;
-    private boolean diffStates;
-    public fedCourtSys(int damage, boolean States, boolean fed,
-    boolean bank)
+    private String defendent;
+    private String plantiff;
+    private int caseNumber;
+    int[] array = new int[]{};
+    int year;
+    public fedCourtSys(String defense, String plant, int year)
     {
-        this.damages = damage;
-        this.diffStates = States;
-        this.fedLaw = fed;
-        this.bankruptcy = bank;
+        this.defendent = defense;
+        this.plantiff = plant;
+        this.year = year;
+        caseNumber();
     }
 
-    public boolean accepted()
+    public boolean accepted(boolean bankruptcy,boolean fedLaw,int damages,boolean diffStates)
     {
         return (damages > 75000 && diffStates || bankruptcy || fedLaw);
     }
-
+    public String getDefendent() {
+        return defendent;
+    }
+    public String getPlantiff() {
+        return plantiff;
+    }
+    public void caseType() {
+        String[] caseType = new String[]{"Crinimal","Civil","Domestic","Probate", 
+        "Paternity","Mental illness", "Juvenile dependency", "Juvenile Offender",
+        "Judgement"};
+        System.out.print(caseType[2]);
+    }
+    public String caseNumber(){
+        return ;
+    }
+    public int getyear(){
+        return year;
+    }
 }
