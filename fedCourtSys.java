@@ -1,5 +1,4 @@
-import java.lang.Math;
-
+import java.util.Scanner;
 public class fedCourtSys
 {
     Rand10 num1 = new Rand10();
@@ -7,11 +6,6 @@ public class fedCourtSys
     Rand10 num3 = new Rand10();
     Rand10 num4 = new Rand10();
     Rand10 num5 = new Rand10();
-    Rand10 num6 = new Rand10();
-    Rand10 num7 = new Rand10();
-    Rand10 num8 = new Rand10();
-    Rand10 num9 = new Rand10();
-    Rand10 num10 = new Rand10();
     private String defendent;
     private String plantiff;
     private int caseNumber;
@@ -24,15 +18,9 @@ public class fedCourtSys
         num3.roll();
         num4.roll();
         num5.roll();
-        num6.roll();
-        num7.roll();
-        num8.roll();
-        num9.roll();
-        num10.roll();
         this.defendent = defense;
         this.plantiff = plant;
         this.year = year;
-        System.out.println(defendent + " VS " + plantiff);
     }
 
     public boolean accepted(boolean bankruptcy,boolean fedLaw)
@@ -40,9 +28,22 @@ public class fedCourtSys
         return (bankruptcy || fedLaw);
     }
 
-    public String caseNumber() {
-        int[] a = new int[]{num1.value,num2.value,num3.value,num4.value,
-            num5.value,num6.value,num7.value,num8.value,num9.value,num10.value};
-        return(""+a[0]+a[1]+a[2]+a[3]+a[4]+a[5]+a[6]+a[7]+a[8]+a[9]);
+    public String NameCase() {
+        return(defendent + " VS " + plantiff);
+    }
+
+    public String caseNumber(int year, String type)
+    {
+        int e;
+        String[] caseType = new String[]{"Criminal", "Civil", "Bankruptcy"};
+        int[] Rand = new int[]{num1.value,num2.value,num3.value,num4.value,
+                num5.value};
+        for (int i=0;i<caseType.length;i++) {
+            if (caseType[i]) {
+                
+            }
+        }
+
+        return(""+Rand[0]+Rand[1]+Rand[2]+Rand[3]+Rand[4]);
     }
 }
