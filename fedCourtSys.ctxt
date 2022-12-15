@@ -2,10 +2,12 @@
 comment0.target=fedCourtSys
 comment1.params=defense\ plant
 comment1.target=fedCourtSys(java.lang.String,\ java.lang.String)
-comment2.params=bankruptcy\ fedLaw
-comment2.target=boolean\ accepted(boolean,\ boolean)
+comment2.params=fedLaw
+comment2.target=boolean\ accepted(boolean)
 comment3.params=
 comment3.target=java.lang.String\ NameCase()
-comment4.params=year\ type
-comment4.target=java.lang.String\ caseNumber(int,\ java.lang.String)
-numComments=5
+comment4.params=
+comment4.target=java.lang.String\ caseNumber()
+comment5.params=
+comment5.target=java.lang.String\ bankruptcy()
+numComments=6

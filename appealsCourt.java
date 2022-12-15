@@ -7,18 +7,15 @@
  */
 public class appealsCourt extends districtCourt
 {
-     public appealsCourt(int damage, boolean States, boolean fed,
-    boolean bank) {
-        super(damage,States,fed,bank);
-        district();
+     public appealsCourt(String defense, String plant, boolean bank) {
+        super(defense,plant,bank);
     }
     
-    public void appeals(boolean win) {
-        if(win == true) {
-            System.out.println("GET PAID, and go home numbnuts");
-        } else if (win == false) {
-            ystem.out.println("appeal to higher court");
+    public String appeals(boolean appeal) {
+        if(appeal) {
+            return("GET PAID, and go home numbnuts");
         }
+        return("appeal to higher court");
     }
 
 }

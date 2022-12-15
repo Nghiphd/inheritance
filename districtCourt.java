@@ -8,19 +8,19 @@
 public class districtCourt extends fedCourtSys
 {
     private boolean win;
+    private boolean appeal;
     public districtCourt(String defense, String plant) {
         super(defense,plant);
         this.win = win;
+        this.appeal = appeal;
     }
 
-    public void district(boolean win) {
-        if((accepted(true,false) || accepted(false,true)) && win == true){
-            System.out.println("GET PAID, and go home numbnuts");
-        } else if (accepted(false,false) && win == false) {
-            System.out.println("appeal to higher court");
+    public String district(boolean win, boolean error) {
+        if(win) {
+            return("GET PAID, and go home numbnuts");
+        }  else if (error) {
+            appeal = true;
         }
-        else {
-            System.out.println("invalid");
-        }
+        return ("appeal to higher court");
     }
 }
