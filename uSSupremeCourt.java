@@ -1,24 +1,23 @@
-
-/**
- * Write a description of class uSSupremeCourt here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
 public class uSSupremeCourt extends appealsCourt
 {
-     public uSSupremeCourt(int damage, boolean States, boolean fed,
-    boolean bank) {
-        super(damage,States,fed,bank);
+    private boolean constitutional;
+    
+    public uSSupremeCourt(String defense, String plant, boolean reverse, boolean constitutional) {
+        super(defense,plant,reverse);
+        this.constitutional = constitutional;
     }
-    public void proceedings(boolean win) {
-        if(accepted()==true && win == true) {
-            System.out.println("GET PAID, and go home numbnuts");
-        } else if (win == false) {
-            System.out.println("appeal to higher court");
+
+    private String proceedings(boolean win) {
+        if(win) {
+            return("You've won and changed America for good you absolute GIGACHAD");
         }
-        else {
-            System.out.println("invalid");
+        return("Honestly a pretty good run, I'd probably watch it on TV");
+    }
+    
+    public String judicialReview() {
+        if(!constitutional) {
+            return("you are in a whole heap of trouble you moron");
         }
+        return("yay you didn't break the law, easiest thing on the planet");
     }
 }

@@ -12,7 +12,7 @@ public class fedCourtSys
     Rand10 num10 = new Rand10();
     private String defendant;
     private String plaintiff;
-    private boolean bankruptcy;
+    private boolean fedlaw;
     public fedCourtSys(String defense, String plant)
     {
         num1.roll();
@@ -25,14 +25,14 @@ public class fedCourtSys
         num8.roll();
         num9.roll();
         num10.roll();
-        this.bankruptcy = bankruptcy;
+        this.fedlaw = fedlaw;
         this.defendant = defense;
         this.plaintiff = plant;
     }
 
     public boolean accepted(boolean fedLaw)
     {
-        return (bankruptcy || fedLaw);
+        return fedLaw;
     }
 
     public String NameCase() {
@@ -46,12 +46,5 @@ public class fedCourtSys
                 num10.value};
         return(""+Rand[0]+Rand[1]+Rand[2]+Rand[3]+Rand[4]+
             Rand[5]+Rand[6]+Rand[7]+Rand[8]+Rand[9]);
-    }
-    
-    public String bankruptcy() {
-        if(bankruptcy) {
-            return("bankruptcy court");
-        }
-        return("district court");
     }
 }

@@ -1,26 +1,23 @@
-
-/**
- * Write a description of class districtCourt here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
 public class districtCourt extends fedCourtSys
 {
-    private boolean win;
-    private boolean appeal;
+    private boolean verdict;
+
     public districtCourt(String defense, String plant) {
         super(defense,plant);
-        this.win = win;
-        this.appeal = appeal;
+        this.verdict = verdict;
     }
 
-    public String district(boolean win, boolean error) {
-        if(win) {
-            return("GET PAID, and go home numbnuts");
-        }  else if (error) {
-            appeal = true;
+    private String bankruptcy(boolean bankruptcy) {
+        if(bankruptcy) {
+            return("Go to bankruptcy court");
         }
-        return ("appeal to higher court");
+        return("Suit and find a lawyer cause this show's on the road");
+    }
+
+    private String district(boolean verdict) {
+        if(verdict) {
+            return("GET PAID and go home numbnuts");
+        }
+        return("Appeal to higher court");
     }
 }

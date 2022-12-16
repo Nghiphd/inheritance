@@ -1,8 +1,9 @@
 #BlueJ class context
 comment0.target=districtCourt
-comment0.text=\n\ Write\ a\ description\ of\ class\ districtCourt\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
-comment1.params=defense\ plant
-comment1.target=districtCourt(java.lang.String,\ java.lang.String)
-comment2.params=win\ error
-comment2.target=java.lang.String\ district(boolean,\ boolean)
-numComments=3
+comment1.params=defense\ plant\ verdict
+comment1.target=districtCourt(java.lang.String,\ java.lang.String,\ boolean)
+comment2.params=bankruptcy
+comment2.target=java.lang.String\ bankruptcy(boolean)
+comment3.params=
+comment3.target=java.lang.String\ district()
+numComments=4
